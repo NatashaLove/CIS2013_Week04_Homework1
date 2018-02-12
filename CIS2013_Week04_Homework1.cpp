@@ -2,22 +2,22 @@
 
 #include <iostream>
 
-void get_input (int& num_1, int& num_2, char& operat);
-void add (int& num_1, int& num_2, char& operat);
-void subtract (int& num_1, int& num_2, char& operat);
-void multiply (int& num_1, int& num_2, char& operat);
-void divide (int& num_1, int& num_2, char& operat);
-void question (char answer);
+void get_input (double& num_1, double& num_2, char& operat);
+void add (double& num_1, double& num_2, char& operat);
+void subtract (double& num_1, double& num_2, char& operat);
+void multiply (double& num_1, double& num_2, char& operat);
+void divide (double& num_1, double& num_2, char& operat);
+void question (char& answer);
 void bye ();
 
 int main () {
 	using namespace std;
-	int num_1, num_2;
+	double num_1, num_2;
 	char operat;
 	char answer;
 	
-	//do
-	//{
+	do
+	{
 	get_input (num_1, num_2, operat);
 	add (num_1, num_2, operat);
 	subtract (num_1, num_2, operat);
@@ -52,17 +52,18 @@ int main () {
 	// }
 	// cout << "Do you want to make another calculation? ('y'/'n')" << endl;
 		// cin >> question;
-	// }
-	//while (question == 'y');
+	 }
+	while (answer == 'y');
 
 	//cout << "Good bye..";
-	void bye ();	
-	
+		
+	bye ();
 return 0;
 
 }
 
-void get_input (int& num_1, int& num_2, char& operat) {
+
+void get_input (double& num_1, double& num_2, char& operat) {
 	
 	using namespace std;
 	cout << "Give me two numbers \n";
@@ -72,46 +73,48 @@ void get_input (int& num_1, int& num_2, char& operat) {
 		cout << "Enter one of the operators: '+', '-', '*', '/' \n";
 		cin >> operat;
 }
-void add (int& num_1, int& num_2, char& operat) {
+void add (double& num_1, double& num_2, char& operat) {
 	using namespace std;
-	int result;
+	double result;
 	if(operat == '+') {
 		result = num_1 + num_2;
 		cout << " If you add them you get " << result << endl;	
 	
 	}
 }
-void subtract (int& num_1, int& num_2, char& operat) {
+void subtract (double& num_1, double& num_2, char& operat) {
 	using namespace std;
-	int result;
+	double result;
 	if(operat == '-') {
 		result = num_1 - num_2;
 		cout << " If you subtract them you get " << result << endl;
 	}	
 }
-void multiply (int& num_1, int& num_2, char& operat) {
+void multiply (double& num_1, double& num_2, char& operat) {
 	using namespace std;
-	int result;
+	double result;
 	if(operat == '*') {
 		result = num_1 * num_2;
 		cout << " If you multiply them you get " << result << endl;
 	
 	}
 }
-void divide (int& num_1, int& num_2, char& operat) {
+void divide (double& num_1, double& num_2, char& operat) {
 	using namespace std;
-	int result;
+	double result;
 	if(operat == '/'){
 		result = num_1 / num_2;
 		cout << " If you divide them you get " << result << endl;
 	}
 }
-void question (char answer) {
+void question (char& answer) {
 	using namespace std;
 	cout << "Do you want to make another calculation? ('y'/'n')" << endl;
 		cin >> answer;
 }
 void bye () {
 	using namespace std;
+	// char answer;
+	// if (answer == 'n')
 	cout << "Good bye.."<< endl;
 }
