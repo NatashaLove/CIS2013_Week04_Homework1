@@ -1,12 +1,15 @@
 //Purpose of the program is to use functions in the calculator program.
 
 #include <iostream>
+#include <cmath>
 
 void get_input (double& num_1, double& num_2, char& operat);
 void add (double& num_1, double& num_2, char& operat);
 void subtract (double& num_1, double& num_2, char& operat);
 void multiply (double& num_1, double& num_2, char& operat);
 void divide (double& num_1, double& num_2, char& operat);
+//void sqrt(double& number);
+//void modulus(double& num_1, num_2);
 void question (char& answer);
 void bye ();
 
@@ -23,6 +26,9 @@ int main () {
 	subtract (num_1, num_2, operat);
 	multiply (num_1, num_2, operat);
 	divide (num_1, num_2, operat);
+	//sqrt(num_1);
+	//sqrt (num_2);
+	//modulus(num_1, num_2);
 	question (answer);
 	
 		// cout << "Give me two numbers \n";
@@ -114,7 +120,6 @@ void question (char& answer) {
 }
 void bye () {
 	using namespace std;
-	// char answer;
-	// if (answer == 'n')
+	
 	cout << "Good bye.."<< endl;
 }
