@@ -7,22 +7,23 @@ void add (int& num_1, int& num_2, char& operat);
 void subtract (int& num_1, int& num_2, char& operat);
 void multiply (int& num_1, int& num_2, char& operat);
 void divide (int& num_1, int& num_2, char& operat);
-void question (char& question);
+void question (char answer);
 void bye ();
 
 int main () {
 	using namespace std;
-	double num_1, num_2;
-	//char question;
+	int num_1, num_2;
 	char operat;
+	char answer;
+	
 	//do
 	//{
-	void get_input (int& num_1, int& num_2, char& operat);
-	void add (int& num_1, int& num_2, char& operat);
-	void subtract (int& num_1, int& num_2, char& operat);
-	void multiply (int& num_1, int& num_2, char& operat);
-	void divide (int& num_1, int& num_2, char& operat);
-	void question (char& question);
+	get_input (num_1, num_2, operat);
+	add (num_1, num_2, operat);
+	subtract (num_1, num_2, operat);
+	multiply (num_1, num_2, operat);
+	divide (num_1, num_2, operat);
+	question (answer);
 	
 		// cout << "Give me two numbers \n";
 		// cin >> num_1;
@@ -105,10 +106,10 @@ void divide (int& num_1, int& num_2, char& operat) {
 		cout << " If you divide them you get " << result << endl;
 	}
 }
-void question (char& question) {
+void question (char answer) {
 	using namespace std;
 	cout << "Do you want to make another calculation? ('y'/'n')" << endl;
-		cin >> question;
+		cin >> answer;
 }
 void bye () {
 	using namespace std;
