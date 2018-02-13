@@ -8,7 +8,7 @@ void add (double& num_1, double& num_2, char& operat);
 void subtract (double& num_1, double& num_2, char& operat);
 void multiply (double& num_1, double& num_2, char& operat);
 void divide (double& num_1, double& num_2, char& operat);
-void sqrt (double& num, char& operat);
+void sqroot (double num, char operat);
 //void modulus(double& num_1, num_2);
 void question (char& answer);
 void bye ();
@@ -26,8 +26,9 @@ int main () {
 	subtract (num_1, num_2, operat);
 	multiply (num_1, num_2, operat);
 	divide (num_1, num_2, operat);
-	sqrt(num_1, operat);
-	sqrt(num_2, operat);
+	sqroot(num_1, operat);
+	sqroot(num_2, operat);
+	
 	//modulus(num_1, num_2);
 	question (answer);
 	
@@ -123,13 +124,11 @@ void bye () {
 	
 	cout << "Good bye.."<< endl;
 }
-void sqrt (double& num, char& operat) {
+void sqroot (double num, char operat) {
 	using namespace std;
-
-	double num_1;
-	double num_2;
+	
 	if(operat == 's'){
-		
-		cout << " Square roots of the numbers are " << sqrt(num_1) << " and" << sqrt(num_2) << endl;
+		double result = sqrt(num);
+		cout << " Square root of the corresponding number is " << result << endl;
 	}
 }
