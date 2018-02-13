@@ -2,15 +2,23 @@
 
 #include <iostream>
 #include <cmath>
-
+//Get two numbers from the user 
 void get_input (double& num_1, double& num_2, char& operat);
+// addition function
 void add (double& num_1, double& num_2, char& operat);
+// subtraction function
 void subtract (double& num_1, double& num_2, char& operat);
+// multiplication function
 void multiply (double& num_1, double& num_2, char& operat);
+// division function
 void divide (double& num_1, double& num_2, char& operat);
+// square root function
 void sqroot (double num, char operat);
+// modulus function: shows if the number is even or odd
 void modulo(int num, char operat);
+// Ask user if he wants to continue
 void question (char& answer);
+// Good-bye
 void bye ();
 
 int main () {
@@ -32,43 +40,13 @@ int main () {
 	modulo(num_2, operat);
 	question (answer);
 	
-		// cout << "Give me two numbers \n";
-		// cin >> num_1;
-		// cin >> num_2;
-		// cout << "What calculations do you want to make?\n";
-		// cout << "Enter one of the operators: '+', '-', '*', '/' \n";
-		// cin >> operat;
-		// if(operat == '+') {
-		// cout << " If you add them you get " << num_1 + num_2 << endl;	
-	
-	// } else {
-		// if(operat == '-') {
-		// cout << " If you subtract them you get " << num_1 - num_2 << endl;	
-	
-	// } else {
-		// if(operat == '*') {
-		// cout << " If you multiply them you get " << num_1 * num_2 << endl;
-	
-	// } else {
-		// if(operat == '/'){
-		// cout << " If you divide them you get " << num_1 / num_2 << endl;
-	// }
-		
-	// }
-	// }
-	// }
-	// cout << "Do you want to make another calculation? ('y'/'n')" << endl;
-		// cin >> question;
 	 }
 	while (answer == 'y');
-
-	//cout << "Good bye..";
 		
 	bye ();
 return 0;
 
 }
-
 
 void get_input (double& num_1, double& num_2, char& operat) {
 	
@@ -129,7 +107,7 @@ void sqroot (double num, char operat) {
 	
 	if(operat == 's'){
 		double result = sqrt(num);
-		cout << " Square root of the corresponding number is " << result << endl;
+		cout << " Square root of the number " << num << " is " << result << endl;
 	}
 }
 void modulo(int num, char operat) {
@@ -137,7 +115,6 @@ void modulo(int num, char operat) {
 	
 	if(operat == 'm'){
 		
-		//double result = sqrt(num);
 		if(num % 2 == 0) {
 		cout << num << " is even " << endl;
 		}
