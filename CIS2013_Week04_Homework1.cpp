@@ -8,7 +8,7 @@ void add (double& num_1, double& num_2, char& operat);
 void subtract (double& num_1, double& num_2, char& operat);
 void multiply (double& num_1, double& num_2, char& operat);
 void divide (double& num_1, double& num_2, char& operat);
-//void sqrt(double& number);
+void sqrt (double& num, char& operat);
 //void modulus(double& num_1, num_2);
 void question (char& answer);
 void bye ();
@@ -26,8 +26,8 @@ int main () {
 	subtract (num_1, num_2, operat);
 	multiply (num_1, num_2, operat);
 	divide (num_1, num_2, operat);
-	//sqrt(num_1);
-	//sqrt (num_2);
+	sqrt(num_1, operat);
+	sqrt(num_2, operat);
 	//modulus(num_1, num_2);
 	question (answer);
 	
@@ -76,7 +76,7 @@ void get_input (double& num_1, double& num_2, char& operat) {
 		cin >> num_1;
 		cin >> num_2;
 		cout << "What calculations do you want to make?\n";
-		cout << "Enter one of the operators: '+', '-', '*', '/' \n";
+		cout << "Enter one of the operators: '+', '-', '*', '/', 's' - for square root or 'm' - for modulus \n";
 		cin >> operat;
 }
 void add (double& num_1, double& num_2, char& operat) {
@@ -122,4 +122,14 @@ void bye () {
 	using namespace std;
 	
 	cout << "Good bye.."<< endl;
+}
+void sqrt (double& num, char& operat) {
+	using namespace std;
+
+	double num_1;
+	double num_2;
+	if(operat == 's'){
+		
+		cout << " Square roots of the numbers are " << sqrt(num_1) << " and" << sqrt(num_2) << endl;
+	}
 }
