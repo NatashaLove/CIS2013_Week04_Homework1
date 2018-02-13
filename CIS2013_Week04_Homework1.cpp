@@ -9,7 +9,7 @@ void subtract (double& num_1, double& num_2, char& operat);
 void multiply (double& num_1, double& num_2, char& operat);
 void divide (double& num_1, double& num_2, char& operat);
 void sqroot (double num, char operat);
-//void modulus(double& num_1, num_2);
+void modulo(int num, char operat);
 void question (char& answer);
 void bye ();
 
@@ -28,8 +28,8 @@ int main () {
 	divide (num_1, num_2, operat);
 	sqroot(num_1, operat);
 	sqroot(num_2, operat);
-	
-	//modulus(num_1, num_2);
+	modulo(num_1, operat);
+	modulo(num_2, operat);
 	question (answer);
 	
 		// cout << "Give me two numbers \n";
@@ -130,5 +130,19 @@ void sqroot (double num, char operat) {
 	if(operat == 's'){
 		double result = sqrt(num);
 		cout << " Square root of the corresponding number is " << result << endl;
+	}
+}
+void modulo(int num, char operat) {
+	using namespace std;
+	
+	if(operat == 'm'){
+		
+		//double result = sqrt(num);
+		if(num % 2 == 0) {
+		cout << num << " is even " << endl;
+		}
+		else {
+		cout << num << " is odd "<< endl;
+		}
 	}
 }
